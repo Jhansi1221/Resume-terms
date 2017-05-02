@@ -1,0 +1,17 @@
+In angular there is a process called digest cycle in which there are watches, for each and every change in the code, the app must watch for 2000 to 3000 changes for a single value change to be reflected on the screen.
+Whereas in angular2, there is no process of digest cycle and watches and there are components that are written seperately in order to reuse it, which results in fast execution of the code. This is the main diff.
+
+
+In angular2, I have used typescipt. And with typescript, coding is much easier than with JavaScript. for example, coding for services in typescript is very less when compared to Javascript.
+
+
+
+What are the advantages of using Angular 2 over Angular 1?
+
+Angular 2 is a platform not only a language:
+Better Speed and Performance: No $Scope in Angular 2, AOT
+Simpler Dependency Injection
+Modular, cross platform
+Benefits of ES6 and Typescript.
+Flexible Routing with Lazy Loading Features
+Easier to Learn

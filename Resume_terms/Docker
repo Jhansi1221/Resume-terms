@@ -1,0 +1,7 @@
+using Docker, we  don’t have to install and configure complex databases nor worry about switching between incompatible language toolchain versions. 
+
+When an app is dockerized, that complexity is pushed into containers that are easily built, shared and run. 
+
+Onboarding a co-worker to a new codebase no longer means hours spent installing software and explaining setup procedures. 
+
+Code that ships with Dockerfiles is simpler to work on: Dependencies are pulled as neatly packaged Docker images and anyone with Docker and an editor installed can build and debug the app in minutes.

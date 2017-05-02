@@ -1,0 +1,157 @@
+explain with examples:
+
+ 1) different types in css? 
+ Inline style: Styles can be written directly in the tag which we want to style. This style can be applied to only this line.
+ Ex: <h1 style="color:blue"> Heading </h1>
+
+ Internal style: If every page in a website has unique style, internal style can be used. This can be done using 'style' tag and it should be placed in 'head' tag.
+ Ex: <style> 
+ body{ color: blue}
+ </style>
+ 
+ External style: Styles for different elements can be written in a css file and that file can be linked in a html file using 'link' element. This element should be placed in the head element in the html document
+ Ex: <link rel="stylesheet" type="text/css" href="mystyle.css"> 
+ 
+
+ 2) what is cascading in css? 
+ When a same element has different styles declared in different types of css, a conflict occurs which style should be applied. In that case, casacding order helps. Inline style has the highest priority among all the three styles, then external style sheets and then browser's default style. Hence, if a <h1> element has two different styles defined in both inline and external style sheet, then the style defined in inline is applied, because it overrides the external style sheet.
+
+ 3) why do we need to use css? 
+ In order to style the webpage, css should be used. Styling can be done using HTML also, but there are more options in css. By using css, styles can be defined using less code even for longer web pages which saves time, which in turn helps loading the webpage faster. This also gives flexibility.
+
+ 4) which type of css is a better practice? 
+ External style sheet is the best practice of css. It is the best, because the style sheet can be seperated from the design content, easily accessible to the robots(search engines), code won't be longer, maintainence is easy and the page loads faster.
+
+ 5) what are selectors and why do we need them in css?
+ Selectors are used to select any elements using some patterns. We can select a class, an id, attributes, psuedo selectors, selectors based on relationship, etc. In order to select a class, '.classname' is used. '#idname' is used to select an id. '*'' is used to select all elements. By using this selectors, we can select a particular element and style for all such elements.
+
+Home work 7 -- December-29-2016 explain with examples: 
+
+1) what is the differences between id, class, attribute, tagName selectors and differences between them, when to use what?
+id --> It is used when only one element has to be styled.
+class --> It is used when multiple different elements has to be styled.
+attribute --> It can be used when an attribute of any element has to be styled.  
+tagname --> When a particular tag has to be syled, we can use a tagname selector.
+
+2) what is css Specificity? --> explain with all possible examples(of all variations)? 
+Specificity is a number given to the css declaration, based on the selector types. By looking at that number, the browser decides which styling should be applied when there are multiple styles for a same element. 
+
+	0 for tagname selectors and pseudo-elements (:before)
+	1 for class selectors, attribute selectors and pseudo-classes(:hover)
+	2 for Id selectors
+
+
+3) look into all css selectors ? explain with examples? http://www.w3schools.com/cssref/css_selectors.asp 
+
+4) look into all css properties ? explain with examples? http://www.w3schools.com/cssref/default.asp 
+
+5) descendent selectors in css? 
+Here, two selectors can be placed side by side with a space and if the second selector is present in the first selector, the styling is applpied. 
+
+6) child selector in css? 
+Here, two selectors are placed with the > symbol in between them. The elements matched by the second selector are selcted only when it is the direct child to the first selector. 
+
+7) adjacent sibiling selectors in css? 
+ Here, two selectors are placed with + symbole placed in between them. The elements matched by the second selector should be immediately followed by the first selector.
+
+8) multiple selectors in css? using , comma 
+When more than one element has to be styled in the same way, we can use this. All the elements has to be seperated using comma and then styling can be written.
+
+9) varaiations in attribite based selectors?
+[attribute=value] --> Select all the elements with the attribute that has exactly the given value.
+[attribute ~= value] --> Select all the elements with the attribute that cointains the exact value.
+[attribute |= value] --> Select all the elements with the attribute that starts with the value or anything follows the value with '-'
+[attribute ^= value] --> Select all the elements with the attributes that start with the value.
+[attribute $= value] --> Select all the elements with the attribute that end with the value.
+[attribute *= value] --> Select all the elements with the attribute that contains the given value.
+
+
+Home work 8 -- January-02-2016 explain with examples: 
+1) what are psuedo classes in css? 
+Pseudo classes are used to define the special state of an element like changing the color of the link when a mouse is hovered on it or when it is clicked or to change the focus of an input element, etc. It is denoted by :
+
+2) what are pusedo elements in css? 
+Pseudo elements are used to style a specific parts of an element like first letter, first line, insertin before or after an element. It is denoted by ::
+
+3) diff between pusedo classes and psuedo elements? 
+Pseudo classes are used to style the elements that are present in the markup language and the styling can be done based on the position of mouse or clicking a link etc. Whereas, pseudo elements are used to style the virtual elements i.e., the elements to be styled are not present in the code actually. Styles can be applied when the user selects the content, etc.
+
+4) explain all pusedo classes and elements with examples? http://www.w3schools.com/cssref/css_selectors.asp 
+
+pseudo elements:
+
+::first-line --> To style the first line of an element
+::first-letter --> to style the first letter of a line
+::before --> to display something before some content
+::after --> tp display something after the content
+::selection --> to style the content when the user selected it.
+
+pseudo classes:
+
+:active --> It styles the active hyperlink
+:visited --> styles the link that is visited
+:link  --> styles the link 
+:hover --> styles the link on which is mouse is hovered or placed
+:checked --> styles the checked element
+:disabled --> styles the disabled input element
+:enabled --> styles the enabledd input element
+:empty --> styles all the element with no child
+:first-child --> styles all the elements that is the first child of the parent element
+:focus --> styles the input element that has being focsed
+:invalid --> styles all the elements with invalid value
+:last-child --> styles all the elements that is the last child of the parent
+:valid --> styles all the elements that are valid value
+:root --> styles the root element of the document
+:nth-child --> styles the nth child of a parent
+
+
+5) what are media queries in css and how can you use them ? 
+Media queries are used when we have to apply styles for a block level element and only when a condition is true. For example, a webpage when opened in mobile or tablet should has different styles than the desktop webpage. At that time, we have to use media queries to check the screen size of the device and apply the styles according to the size.
+
+6) what is responsive web design?
+Responsive web design is desiging a website in such a way that it can be opened in any device with a good look i.e., website designed for a desktop should work well when opened in a mobile device too.
+
+
+Home work 9 -- January-03-2016 explain with examples for all question below: 
+
+1) what are media queries? 
+Media queries are used to style the block-level elements only if the given condition is true.
+
+2) In media queries what are following properties min-width, max-width, resolution, screen, print, speech, with examples 
+min-width --> If the width of the screen of the device is minimum than the given min-width, the given style applies.
+max-width --> If the width of the screen of the device is maximum than the given max-width, the given style applies.
+min-resolution --> Applie sa style sheet, if the screen has a minimum resolution as specified.
+screen --> If the media device has a screen, the styles can be applied.
+print --> Styles can be applied to print media
+speech --> Styles can be applied to screen readers which reads the conent present in the page.
+
+3) what are position property values in css (static, relative, absolute, fixed) explain differences ? 
+static: static position is the position of the element in the normal flow i.e., It is not placed in any special way.
+relative: It is the position relative to the normal position i.e., we can place an element some distance right or left or bottom or top to the normal position.
+absolute: It is the position relative to the closest ancestor that is positioned.
+fixed: It is a fixed position in a webpage and it wont be moved even if the page is scrolled.
+
+
+4) what is a float and clear property in css? 
+float: It is used to wrap the text around images.
+Clear: It is used to manage the wrapped text around images. i.e., We can avoid wrapping text around images using clear property
+
+5) what is bootstrap grid system? rows and columns? 
+Bootstrap grid system allows upto 12 columns for a screen. And we can combine columns to make it wider. Columns must always be placed in rows.
+
+6) what are xs, sm, 
+md, lg in bootstrap? 
+xs - phones and handheld
+sm - tablets
+md - desktops
+lg - large desktops
+
+7) differences between container and container-fluid? 
+container --> It is used to provide some common styles for padding, aligning, margins, fonts and colors. It can be specially used for articles, headers, footers, form, div, section.
+
+container-fluid --> Container-fluid spans the entire width of a viewport
+
+8) what are the break points to be use in media queries for mobile, tablets, medium size desktops and large desktops?
+When we want a particular part of the design has to behave differently, we have to add breakpoints. In specific, if we want to change the design when we zoomed in the screen or when the webpage is opened in a tablet or a mobile, we have to add breakpoints.
+
+

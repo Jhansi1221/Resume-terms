@@ -1,0 +1,241 @@
+1. What are the steps in attaching reports with oracle applications?
+
+There are certain steps that you need to follow systematically for attaching the reports along with oracle application.
+Designing the report.
+Generating executable file related with report.
+Moving executable and source files to the appropriate folder of the product.
+Registering the report in the form of concurrent executable.
+Defining concurrent program for registered that are executable.
+Adding concurrent program for requesting group of responsibility.
+2. Differentiate Apps schema from other schemas?
+
+Apps schema is the one that comprises of only synonyms and there is no possibility of creating tables in it. Other schema comprises of tables and objects in it and allows the creation of tables as well as for providing grants to tables.
+
+3. Define custom top and its purpose.
+
+Custom top can be defined as the customer top which is created exclusively for customers. According to the requirement of the client many number of customer tops can be made. Custom top is made used for the purpose of storing components, which are developed as well as customized. At the time when the oracle corporation applies patches, every module other than custom top are overridden.
+
+4. What is the method of calling standard – interface program from pl/sql or sql code?
+
+FND_REQUEST.SUBMIT_REQUEST(PO, EXECUTABLE NAME,,,,,PARAMETERS)
+
+5. What is the significance related with US folder?
+
+US folder is just a language specification. Multiple folders can be kept for language specification depending on the languages that are installed.
+
+Oracle Apps
+Oracle Apps
+6. Which are the kinds of report triggers?
+
+There are mainly five different kinds of report triggers available. They are
+
+Before report
+After report
+Before parameter form
+After parameter form
+Between pages
+7. What is the firing sequence related with report triggers?
+
+The sequence related with firing is as follows before parameter form, after parameter form, before the report, between pages and after report.
+
+8. What is the purpose of cursors in PL/SQL?
+
+The cursor can be made used for the purpose of handling various row – query associated with PL/SQL. Implicit cursors are available for the purpose of handling all the queries related with oracle. The memory spaces that are unnamed are used by oracle for storing the data that can be used with implicit cursors.
+
+
+ 
+9. Define record group?
+
+Record group can be considered as a concept used for the purpose of holding sql query that is associated with list related with values. Record group consists of static data and also can access data inside tables of database through sql queries.
+
+10. What is a FlexField?
+
+This is a kind of field associated with oracle apps that are used for capturing information related with the organization.
+
+11. Is there any possibility for having custom schema at any time when it is required?
+
+You have the provision for having custom schema at the time of creating table.
+
+12. What is the concurrent program?
+
+Concurrent programs are instances that need to be executed along with incompatibles and parameters.
+
+13. Define application top?
+
+Application tops are found when we are connecting to server. There are two types of application tops available they are product top and custom top. Product top is the kind of top that is built in default by manufacturer. Custom top can be chosen by the client, and any number of custom tops can be created as per the requirement of the client.
+
+14. Explain about the procedures that are compulsory in the case of procedures?
+
+There are number of parameters which are mandatory in the case of procedures and each of these parameters has a specific job associated with it.
+
+Errorbuf: This is the parameter used for returning error messages and for sending that to log file.
+Retcode: This is the parameter capable of showing the status associated with a procedure. 0, 1 and 2 are the status displayed by this parameter. 0 is used for indicating completed normal status, 1 defines completed warning status and 2 is the one denoting completed with error.
+15. What is a token?
+
+Token is used for transferring values towards report builder. Tokens are usually not case – sensitive.
+
+16. What is the menu?
+
+Menu can be defined as a hierarchical arrangement associated with functions of the system.
+
+17. What is Function?
+
+Function is the smaller part of the application and that is defined inside menu.
+
+18. Define SQL Loader ?
+
+Sql loader is a utility resembling a bulk loader for the purpose of moving data that are present in external files towards the oracle database.
+
+19. How to register concurrent program with oracle apps?
+
+There are certain steps that you need to follow for the purpose of registering concurrent program.
+
+The first step is to log in to your system with the responsibility of the system administrator.
+The next step is to define executable concurrent program.
+While defining concurrent program do take care to give application name, short name and description along with the selection of executable concurrent program.
+20. Define set – of books?
+
+SOB can be defined as the collection of charts associated with accounts, currency and calendars.
+
+21. What is a value set?
+
+Value set is used for the purpose of containing the values. In the case of a value set getting associated with report parameters, a list containing values are sent to the user for accepting one among the values in the form of parameter values.
+
+22. Define the Types of validation?
+
+There are various kinds of validation.
+
+None: this is the indication of minimal validation.
+Independent: Input should be there in the list of – values that are defined previously.
+Dependent: According to the previous value, input is compared with a subset of values.
+Table: Input is checked on the basis of values that exist in the application table.
+Special: These are the values that make use of flex field.
+Pair: A pair can be defined as the set of values that make use of flex fields.
+Translated Independent: This is a kind of value that can be made used only if there is any existence for the input in the list that is defined previously.
+Translatable dependent: In this kind of validation rules that compare the input with the subset of values associated with the previously defined list.
+23. Define Template?
+
+Template is a kind of form that is very much required before the creation of any other type of forms. It is a kind of form that incorporates attachments that are platform independent and associated with a particular library.
+
+24. Which are the attachments that are platform independent and become a part of the template?
+
+
+ 
+There are several attachments that are part of the template form.
+
+APPSCORE:  This is a kind of attachment that comprises of packages as well as procedures which are useful for all the different forms for the purpose of creating toolbars, menus etc.
+APPSDAYPK: This attachment contains packages that are helpful in controlling the applications associated with oracle.
+FNDSQF: This attachment has various procedures as well as packages for flex fields, profiles, message dictionary and also concurrent processing.
+CUSTOM: This attachment is helpful in extending the application forms of oracle without causing any modification related with the application code. There are various kinds of customization including zoom.
+25. Define Ad-hoc reports?
+
+This is a kind of report that is made used for fulfilling the reporting needs of a particular time.
+
+26. What is the Definition of responsibility?
+
+Responsibility is the method through which the group of various modules can be made in a format accessible by users.
+
+27. Define Autonomous transaction?
+
+This is a kind of transaction that is independent of another transaction. This kind of transaction allows you in suspending the main transaction and helps in performing SQL operations, rolling back of operations and also committing them. The autonomous transactions do not support resources, locks or any kind of commit dependencies that are part of main transaction.
+
+28. Which are the types of Triggers?
+
+There are various kinds of triggers associated with forms and they are
+
+Key triggers
+Error triggers
+Message triggers
+Navigational triggers
+Query – based triggers
+Transactional triggers
+29. What is the purpose of Temp tables in interface programs?
+
+These are the kinds of tables that can be used for the purpose of storing intermediate values or data.
+
+30. Where to define the parameters in the report?
+
+The parameters can be defined inside the form of concurrent program, and there is no need for registering the parameters but you may need to register the set of values that are associated with the parameters.
+
+31. Define the steps for customizing form?
+
+You need to make use of the following steps for the purpose of customizing forms.
+
+The first and foremost thing that you need to do is to copy the files template.fmb as well as Appsatnd.fmb from AU_TOP/forms/us and paste that inside custom directory. By doing this the library associated with this task get copied by it’s own.
+You can now create the forms you want and customize them.
+Do not forget to save the created forms inside the modules where they need to be located.
+32. Define about Key Flexfiled ?
+
+Key flexfiled is a unique identifier and is usually stored inside segment, and there are two different attributes associated with this which are flexfiled qualifier and segment qualifier.
+
+32. Define uses of Key Flexfield ?
+
+This is a unique identifier for the purpose of storing information related with key. It also helps in entering as well as displaying information related with key.
+
+34. Define Descriptive FlexField ?
+
+This is a kind of flexfield that is mainly used for the purpose of capturing additional information, and it is stored in the form of attributes. Descriptive flexfield is context sensitive.
+
+35. List some uses of DFF (Descriptive Flex Field) ?
+
+This is a kind of flexfield that is mainly used for gathering extra information and also for providing space for you to form and get expanded.
+
+36. Define MRC ( Multiple Reporting Currency)?
+
+Multiple – Reporting Currency is a kind of feature that is associated with oracle application and helps in reporting as well as maintaining records that are associated with the transaction level in various forms of functional currency.
+
+37. Define FSG ( Financial Statement Generator) ?
+
+This is a kind of tool that is highly powerful as well as flexible and helps in building reports that are customized without depending on programming. This tool is only available with GL.
+
+38. Define Oracle Suite?
+
+Oracle suite is the one that comprises of oracle apps as well as software associated with analytical components.
+
+39. Define ERP (Enterprise Resource Planning) ?
+
+ERP is a software system that is available as a package and can be helpful in automating as well as integrating most of the processes associated with the business.
+
+40. What is a datalink?
+
+Datalink can be made used for the purpose of relating the results that are associated with various different queries.
+
+41. How to attain parameter value depending on the first parameter?
+
+Second parameter can be attained by making use of the first parameter by making use of the command $flex$value set name.
+
+42. Define data group?
+
+Data group can be defined as the group of applications related with oracle.
+
+43. Explain about security attributes?
+
+Security attributes can be made used by Oracle for allowing the particular rows containing data visible to the users.
+
+44. Define about Profile Option?
+
+Profile option comprises of set of options that are helpful in defining the appearance as well as behavior of the application.
+
+45. Explain about application?
+
+Application can be defined as the set of menus, forms and functions.
+
+46. Where do we use Custom.pll?
+
+Custom.pll can be used during the process of making customized or new oracle forms.
+
+47. Where are tables created?
+
+Tables can be created at custom schema.
+
+48. Define multi org ?
+
+This is a kind of functionality for data security.
+
+49. Define Request Group ?
+
+Request group is assigned with a set of responsibilities.
+
+50. What is the usage of the spawned object?
+
+This object is used for process associated with executable field.

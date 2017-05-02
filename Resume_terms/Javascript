@@ -1,0 +1,295 @@
+Home work 14 -- January-15-2016 explain with examples? 
+1) all methods for numbers, string, array 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number
+
+Number:
+
+Number.isNaN() --> Determines whether the give value is NaN or not. Ex: Number.isNaN(0) //true
+
+Number.isInteger() --> determines if the given number is an integer or not. Ex: Number.isInteger(564.009) //false
+
+Number.parseInt() --> Parses the number into an integer. Ex: Number.parseInt(34.56) //34
+
+Number.parseFloat() --> Parses the given number into a float. Ex: Number.parseFloat(34.56) //34.56
+
+Number.isFinite() --> determines if the given number is finite or not. Number.isFinite("infinity")
+false
+
+Number.toFixed() --> Returns the given number by fixing it to the given position. Ex: 234.452324.toFixed(3) //234.452
+
+Number.toExponential() --> Converts a number to an exponential number Ex:numObj.toExponential();  // logs 7.71234e+1
+
+
+
+Strings: 
+
+string.fromCharCode --> This gives the characters from the given char code. Ex: string.fromCharCode(65,66); // "AB"
+
+String.charAt() --> This method gives the cahracter located at the given position in the string. Ex: hello.charAt(4); //o
+
+String.concat() --> This method combines a string to another string. Ex: "Hello ".concat("Jhansi") // Hello Jhansi
+
+String.endsWith() --> This method returns true or false if the given string ends with the characters that are given in the bracket. Ex: "hello Jhansi".endsWith("Jhansi"); //true
+
+String.includes() --> This method returns true or false if a string lies in the given string. Ex: "hello jhansi".includes("hi"); //false
+
+String.indexOf() --> This method returns the index of the a string in the given string or else it returns -1. Ex: "hello jhansi".indexOf(" jh"); //5
+
+String.split() --> This method divides a string into substrings. We can even split using a seperator like a comma or any other symbol. Ex: "hi Jhansi, how are you".split(" "); // ["hi", "Jhansi", "how", "are" , "you"]
+
+String.repeat() --> This method concatenates the given string repeatedly by the given parameter. Ex: world.repeat(4); //worldworldworldworld
+
+String.slice() --> This method returns a substring of the give string. Ex: "hi Jhansi, how are you".slice(3,8); //Jhans
+
+String.trim() --> This method removes all the white spaces present in the given string. Ex:  "           hi Jhansi,      how are you        ".trim(); // "hi Jhansi,      how are you"
+
+String.toUpperCase() --> This method converts the given string into all uppercase. Ex: "hello world".toUpperCase(); // "HELLO WORLD"
+
+
+
+Arrays:
+
+Array.join() --> This method joins the given array. It joins with seperator if mentioned. Ex: ["hi", "Jhansi", "how", "are" , "you"].join('/'); // "hi/Jhansi/how/are/you"
+
+Array.of() --> creates an array with the given parameters. Ex: Array.of("one", "two","three"); //["one","two","three"]
+
+Array.length() --> Returns the length of the array. Ex: ["one","two","three"].length; //3
+
+Array.concat() --> Concatenates the give array with the given parameters. Ex: ["one","two","three"].concat(1) // ["one", "two", "three", 1]
+
+Array.every() --> It checks the given condition with every element in the array. 
+
+Array.some() --> Checks the condition with some of the elements in the array.
+
+Array.forEach() --> This method is used to loop over an array.
+
+Array.push() --> Inserts an element at the end of an array. ["one","two","three"].push("1") // ["one","two","three", "1"]
+
+Array.pop() --> Removes an element from the end of an array. Ex: ["one","two","three", "1"].pop(); //["one","two","three"]
+
+Array.shift() --> Removes an element from the starting of an array. ["one","two","three", "1"].shift(); //[two","three", "1"]
+
+Array.unshift() --> Adds an element to the starting of an array. ["one","two","three", "1"].unshift("2"); //["2", "one","two","three", "1"]
+
+Array.indexOf() --> returns the index of the given element in the array. ["one","two","three", "1"].indexOf("1"); //4
+
+Array.sort() --> returns the array in a sorted order.
+Ex: ["one","two","three", "1"].sort(); //["1", "one", "three", "two"]
+
+Array.reverse() --> returns the array in a reverse order. Ex:["one","two","three", "1"].reverse(); //["1", "three", "two", "one"]
+
+
+
+
+Home work 16 -- January-17-2016 explain with examples: 
+
+1) array methods --> forEach, map, reduce, sort, reverse ,... https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array 
+forEach --> This method is used to loop over an array. Ex: var x= [1,3,2,5]; x.forEach(function(element){x=x*2;}); //x=[2,6,4,10] 
+map --> This method creates a new array with the given function performed on all the elements. Ex: var x = [1,3,4,5];
+var y = x.map(function(x){x=x*2;}); // x=[1,3,4,5] y= [2,6,8,10]
+reduce -->
+sort --> used to sort the elements of an array in an alphabetical order. Ex: ["one","two","three", "1"].sort(); //["1", "one", "three", "two"]
+
+reverse --> used to display the array elements in the reverse order. Ex:["one","two","three", "1"].reverse(); //["1", "three", "two", "one"]
+
+2) what are the different ways to create objects?
+three ways to create an object: 
+      -->new operator // var dog = new Object();
+      -->Object literal: Name-value pairs inside curly braces // var dog ={ name:"snoopy", age:"1", breed:"pug"};
+      -->Object constructor: this method can be used to create many objects of same properties. Ex:
+      function dog(name, age, breed){
+      this.name="snoopy";
+      this.age=1;
+      this.breed="pug";
+      }
+
+3) what are properties in object?
+   The values associated to the objects are called properties. In the above example properties of the object 'dog' are name, age and breed.
+
+4) how to retrieve a property value in object?
+Syntax to retrieve:   object.propertyName // dog.breed
+ 					  object.["propertyName"] //dog.["breed"]
+ 					  object[expression]   // x="breed"; dog[x]
+
+5) how to add a property into object? 
+We can simply add a property to an object using assignment operator. Ex: dog.color="white";
+
+6) how to remove a property in object? 
+We can remove a property in an object using the keyword 'delete'. Ex: delete dog.breed;
+
+7) how to update a property value in object?
+We can update simply by writing the new value. Ex: dog.color = "black";
+
+8) how to check if an property exists with in an object?
+We can check that by using 'hasOwnProperty'. Ex: if(dog.hasOwnProperty('age')){console.log("true")}; //true
+
+
+
+Home work 17 -- January-19-2016
+explain with examples:
+1) What is Object.defineProperty? and all possible configuration options? description?
+The Object.defineProperty() method defines a new property directly on an object, or modifies an existing property on an object, and returns the object.
+The possible configurations are: configurable, writable, enumerable, value, get and set
+
+2) What is Object.defineProperties? and all possible configuration options? description?
+This can change many properties either new or existing ones at a time. Everything is same as the object.defineProperty()
+
+3) what is Object.create, Object.keys?
+Object.create(): This method creates an object with the specifies prototype and properties.
+Object.keys() :This methos returns the keys for the values in the object.
+
+4) can we create object from functions?
+Yes, we can create an object using funtions.
+Ex: var obj= new function(){
+	this.name=name;
+}
+var c= new obj("hello");
+
+5) what is a prototype?
+
+6) what is this keyword and its significance?
+When we create a new object, the current object is referred as 'this'.
+Ex: var obj = {
+    name: "obj",
+    f: function () {
+        return this + ":" + this.name;
+    }
+};
+document.write(obj.f());  //[object Object]:obj
+
+7) what is window?
+All global variables are attached to an object called window.
+var a=10;
+function func(){
+	var b=10;
+}
+window.a; //10
+window.b; //undefined
+
+8) also look into functions? and what is a callback function?
+A function that takes other functions as arguments or returns functions as its result is called a higher-order function, and the function that is passed as an argument is called a callback function. 
+ex: function fullName(firstName, lastName, callback){
+  console.log("My name is " + firstName + " " + lastName);
+  callback(lastName);
+}
+
+fullName("Jackie", "Chan", function(ln){console.log('Welcome Mr. ' + ln);}); // Welcome Mr. Jackie Chan
+
+
+
+
+Homework 18 -- January-23-2016
+explain by examples
+
+1) What is call, apply and bind in javascript?
+call is used to change the values of the keyword 'this'. 
+ex: function1.call(name, 'Jhansi', 'Sneha', 'Sandeep');
+
+apply is also used to change the values of the keyword 'this'. But, the values are passed in an array here.
+ex: function1.call(name, ['Jhansi', 'Sneha', 'Sandeep']);
+
+bind is used to assign a function with an already existing function if they have the same body.
+ex: var sum = function(a, b) {
+  return a + b;
+};
+var add5 = sum.bind(null, 5);
+console.log(add5(10)); // 15
+
+2)what is context in javascript?
+
+3)What is lexical scope?
+Lexical scoping: Variables declared outside of a function are global variables and are visible everywhere in a JavaScript program. Variables declared inside a function have function scope and are visible only to code that appears inside that function.
+Ex: var scope = 5;
+function whatismyscope(){
+   var scope = 10;
+   function func() {return scope;}
+   return func;
+}
+whatismyscope()(); //10
+
+4) What is for in loop?
+For in loop iterates over the properties of an object.
+Ex: var obj = {a: 1, b: 2, c: 3};
+    
+	for (var prop in obj) {
+	  console.log('obj.' + prop, '=', obj[prop]);
+	}
+
+	// Output:
+	// "obj.a = 1"
+	// "obj.b = 2"
+	// "obj.c = 3"
+
+
+Homework 20 -- January-25-2016
+explain by examples?
+1) what is IIFE? why do we need to use?
+IIFE is the immmediately invoked function expression, which means it in invoked immediae=tely after defining it. By using this IIFE,we dont have to create global variables and functions. The JS code gets maintainable. It doesn't make conflicts with other variables or functions with the same name.
+Ex: 
+<p id="demo"> </p>
+<script>
+(funtion (){
+	var age=20;
+   document.getElementByID("demo").innerHTML = "Person age is: "+age;
+})();
+</script>
+
+2) what is namespacing in java script? why do we need to use it?
+Namespacing is used to group similar functions or variables which are also availble in other libararies or classes. We use it to avoid naming collisions.
+
+3) what is module pattern?
+
+4) is it a good practice to have too many global variables or functions ? why if yes ? why if no?
+No, its not a good practice to include so many global variables and functions in javascript. Because, it slows down the script to find the global variables and there's a great chance to forget that we have already declared a global scope and we end up declaring it again which results in over writing the global variable.
+
+5) what are HTML dom events?
+Javascript can be written for HTML events like mouse click, page loading, image loading, when an input text is changed, etc. For example, we can change the text or background color of a text when a mouse is hovered on it. This is called a HTML DOM event.
+
+
+6) what is an event listener in javascript? how can we configure them?
+Event listener listens which type of event has been happened and triggers the action written in the event handler which is attatched to the event listener. One or more event handlers can be attached to one event listener. Event listeners can be added to any DOM objects like HTML DOM events, window objects, etc.
+
+
+7) what is event handler?
+The function that tells what to do when an event occurs is called an event handler.
+
+8) what is event propagation? what bubbling and capturing?
+Event propagation decides which event should occur first when there is an element inside another element. For example, if there is a <p> element in a <div> element and when the user clicks the <div> element, event propogation will decide which event should be handled first.
+
+There are two ways: 
+Event bubbling: Here, the inner element's event is handled first and then the outer element.
+Event Capturing: Here, the outer element's event is handled first and then the inner element.
+
+
+
+
+Homework 21 -- January-31-2016
+1) what is element.addEventListener(event, eventHandler, captureFlag) in java script?
+This is the syntax for adding event listners to any DOM object or any HTML element. First parameter is the event i.e., click or mouse over or key etc. Second parameter is the event handler i.e., the function to be called when the event occurs. Third parameter is captureFlag for Event bubbling. The default value of the flag is false and event bubbling occurs and if it is set to true, event capturing occurs.
+
+2) what is a selector in java script?
+In javascript, we can select elements by using id, class, tagName or using css selectors. Like document.getElementById, document.getElementsByClassName, document.getElementsByTagName, document.querySelectorAll
+
+3) what is id, class, tagName?
+id is used to style an element uniquely and hence one id should be given to one element only.
+Same class name can be given to multiple elements in order to style all the elements in the same way.
+tagname is the html tag that can be given to html text. By using the tag name also we can style the html page.
+
+4) document.getElementById, document.getElementsByClassName, document.getElementsByTagName, document.querySelectorAll
+document.getElementById() --> gets all the elements that matches by ID
+document.getElementsByClassName --> gets all the elements that matches by class name
+document.getElementsByTagName --> gets all the elements that matches by tag name
+document.querySelectorAll(css selectors) --> gets all the elements that matches by the given css selector
+
+
+5) event propagation?
+Event propagation decides which event should occur first when there is an element inside another element. For example, if there is a <p> element in a <div> element and when the user clicks the <div> element, event propogation will decide which event should be handled first.
+
+6) what is event bubbling ane event captuing?
+Event bubbling: Here, the inner element's event is handled first and then the outer element.
+Event Capturing: Here, the outer element's event is handled first and then the inner element.
+
+7) what is even.stopPropagation vs event.stopImmediatePropagation in javascript?
+event.stopPropagation will only stop the current listener and the remaining listeners doesn't stop. Whereas, event.stopImmediatePropagation will stop all the listeners.

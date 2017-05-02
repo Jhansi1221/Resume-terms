@@ -1,0 +1,203 @@
+1) Explain what is Model-View-Controller?
+
+MVC is a software architecture pattern for developing web application. It is handled by three objects Model-View-Controller.
+
+2) Mention what does Model-View-Controller represent in an MVC application?
+
+In an MVC model,
+
+Model– It represents the application data domain. In other words applications business logic is contained within the model and is responsible for maintaining data
+View– It represents the user interface, with which the end users communicates. In short all the user interface logic is contained within the VIEW
+Controller– It is the controller that answers to user actions. Based on the user actions, the respective controller responds within the model and choose a view to render that display the user interface.  The user input logic is contained with-in the controller
+3) Explain in which assembly is the MVC framework is defined?
+
+The MVC framework is defined in System.Web.Mvc.
+
+4) List out few different return types of a controller action method?
+
+View Result
+Javascript Result
+Redirect Result
+Json Result
+Content Result
+5) Mention what is the difference between adding routes, to a webform application and an MVC application?
+
+To add routes to a webform application, we can use MapPageRoute() method of the RouteCollection class, where adding routes to an MVC application, you can use MapRoute() method.
+
+mvc-design-diagram
+
+6) Mention what are the two ways to add constraints to a route?
+
+The two methods to add constraints to a route is
+
+Use regular expressions
+Use an object that implements IRouteConstraint Interface
+7) Mention what is the advantages of MVC?
+
+MVC segregates your project into a different segment, and it becomes easy for developers to work on
+It is easy to edit or change some part of your project that makes project less development and maintenance cost
+MVC makes your project more systematic
+8) Mention what “beforFilter()”,“beforeRender” and “afterFilter” functions do in Controller?
+
+beforeFilter(): This function is run before every action in the controller. It’s the right place to check for an active session or inspect user permissions.
+beforeRender(): This function is called after controller action logic, but before the view is rendered. This function is not often used, but may be required If you are calling render() manually before the end of a given action
+afterFilter(): This function is called after every controller action, and after rendering is done. It is the last controller method to run
+9) Explain the role of components Presentation, Abstraction and Control in MVC?
+
+
+ 
+Presentation: It is the visual representation of a specific abstraction within the application
+Abstraction: It is the business domain functionality within the application
+Control: It is a component that keeps consistency between the abstraction within the system and their presentation to the user in addition to communicating with other controls within the system
+10) Mention the advantages and disadvantages of MVC model?
+
+Advantages	Disadvantages
+It represents clear separation between business logic and presentation logic
+Each MVC object has different responsibilities
+The development progresses in parallel
+Easy to manage and maintain
+All classes and object are independent of each other
+The model pattern is little complex
+Inefficiency of data access in view
+With modern user interface, it is difficult to use MVC
+You need multiple programmers for parallel development
+Multiple technologies knowledge is required
+11) Explain the role of “ActionFilters” in MVC?
+
+In MVC “ ActionFilters” help you to execute logic while MVC action is executed or its executing.
+
+12) Explain what are the steps for the execution of an MVC project?
+
+The steps for the execution of an MVC project includes
+
+Receive first request for the application
+Performs routing
+Creates MVC request handler
+Create Controller
+Execute Controller
+Invoke action
+Execute Result
+13) Explain what is routing? What are the three segments for routing is important?
+
+Routing helps you to decide a URL structure and map the URL with the Controller.
+
+The three segments that are important for routing is
+
+ControllerName
+ActionMethodName
+Parameter
+14) Explain how routing is done in MVC pattern?
+
+There is a group of routes called the RouteCollection, which consists of registered routes in the application.  The RegisterRoutes method records the routes in this collection.  A route defines a URL pattern and a handler to use if the request matches the pattern. The first parameter to the MapRoute method is the name of the route. The second parameter will be the pattern to which the URL matches.  The third parameter might be the default values for the placeholders if they are not determined.
+
+
+ 
+15) Explain using hyperlink how you can navigate from one view to other view?
+
+By using “ActionLink” method as shown in the below code. The below code will make a simple URL which help to navigate to the “Home” controller and invoke the “GotoHome” action.
+
+Collapse / Copy Code
+
+<%= Html.ActionLink(“Home”, “Gotohome”) %>
+
+16) Mention how can maintain session in MVC?
+
+Session can be maintained in MVC by three ways tempdata, viewdata, and viewbag.
+
+17) Mention what is the difference between Temp data, View, and View Bag?
+
+Temp data: It helps to maintain data when you shift from one controller to other controller.
+View data: It helps to maintain data when you move from controller to view
+View Bag: It’s a dynamic wrapper around view data
+18) What is partial view in MVC?
+
+Partial view in MVC renders a portion of view content. It is helpful in reducing code duplication. In simple terms, partial view allows to render a view within the parent view.
+
+19) Explain how you can implement Ajax in MVC?
+
+In Ajax, MVC can be implemented in two ways
+
+Ajax libraries
+Jquery
+20) Mention what is the difference between “ActionResult” and “ViewResult” ?
+
+“ActionResult” is an abstract class while “ViewResult” is derived from “AbstractResult” class.  “ActionResult” has a number of derived classes like “JsonResult”, “FileStreamResult” and “ViewResult” .
+
+“ActionResult” is best if you are deriving different types of view dynamically.
+
+21) Explain how you can send the result back in JSON format in MVC?
+
+In order to send the result back in JSON format in MVC, you can use “JSONRESULT” class.
+
+22) Explain what is the difference between View and Partial View?
+
+ 
+
+                            View	                               Partial View
+It contains the layout page
+Before any view is rendered, viewstart page is rendered
+View might have markup tags like body, html, head, title, meta etc.
+View is not lightweight as compare to Partial View
+ It does not contain the layout page
+Partial view does not verify for a viewstart.cshtml. We cannot put common code for a partial view within the viewStart.cshtml.page
+Partial view is designed specially to render within the view and just because of that it does not consist any mark up
+We can pass a regular view to the RenderPartial method
+23) List out the types of result in MVC?
+
+In MVC, there are twelve types of results in MVC where “ActionResult” class is the main class while the 11 are their sub-types
+
+ViewResult
+PartialViewResult
+EmptyResult
+RedirectResult
+RedirectToRouteResult
+JsonResult
+JavaScriptResult
+ContentResult
+FileContentResult
+FileStreamResult
+FilePathResult
+24) Mention what is the importance of NonActionAttribute?
+
+All public methods of a controller class are treated as the action method if you want to prevent this default method then you have to assign the public method with NonActionAttribute.
+
+25) Mention what is the use of the default route {resource}.axd/{*pathinfo} ?
+
+This default route prevents request for a web resource file such as Webresource.axd or ScriptResource.axd from being passed to the controller.
+
+26) Mention the order of the filters that get executed, if the multiple filters are implemented?
+
+The filter order would be like
+
+Authorization filters
+Action filters
+Response filters
+Exception filters
+27) Mention what filters are executed in the end?
+
+In the end “Exception Filters” are executed.
+
+28) Mention what are the file extensions for razor views?
+
+For razor views the file extensions are
+
+.cshtml: If C# is the programming language
+.vbhtml: If VB is the programming language
+29) Mention what are the two ways for adding constraints to a route?
+
+Two methods for adding constraints to route is
+
+Using regular expressions
+Using an object that implements IRouteConstraint interface
+30) Mention two instances where routing is not implemented or required?
+
+Two instance where routing is not required are
+
+When a physical file is found that matches the URL pattern
+When routing is disabled for a URL pattern
+31) Mention what are main benefits of using MVC?
+
+There are two key benefits of using MVC
+
+As the code is moved behind a separate class file, you can use the code to a great extent
+As behind code is simply moved to.NET class, it is possible to automate UI testing. This gives an opportunity to automate manual testing and write unit tests.
